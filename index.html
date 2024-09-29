@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./script.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  
+
+
+<div id="contain" class="text-center m-10">
+  <h1 class="bg-blue-400 text-white py-2 font-sans">Click here to add items </h1>
+  <input id="input1" name="myInput" type="text" class="bg-green-400 mt-5 p-2 w-72" placeholder="Add Items . . .">
+  <br>
+  <button onclick="add()" id="myBtn" class="hover:bg-red-300 duration-200 mt-4 bg-yellow-400 py-2 px-10 font-serif text-lg">ADD</button>
+  <button onclick="refresh()" class="hover:bg-red-300 duration-200 mt-4 bg-yellow-400 py-2 px-10 font-serif text-lg">REFRESH</button>
+  <ul id="unorder"></ul>
+</div>
+
+
+
+
+</body>
+</html>
