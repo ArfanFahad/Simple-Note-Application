@@ -55,10 +55,14 @@ function add() {
   items.style.marginTop = "20px"; 
   items.style.fontSize = "20px";
   // items.textContent = input; 
-  items.textContent = `${counter}. ${input}`; 
-  let myList = document.querySelector("#unorder"); 
-  myList.appendChild(items); 
-  counter++;   
+  if (input == "") {
+    alert("Please Insert a Note!"); 
+  } else {
+    items.textContent = `${counter}. ${input}`; 
+    let myList = document.querySelector("#unorder"); 
+    myList.appendChild(items); 
+    counter++;   
+  }
 }
 
 function refresh () {
